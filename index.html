@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>strona</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div id="canvases">
+    <canvas id="main"></canvas>
+
+    <div id="graphs">
+      <canvas id="position-graph"></canvas>
+      <canvas id="velocity-graph"></canvas>
+      <canvas id="acceleration-graph"></canvas>
+    </div>
+  </div>
+
+  <div id="settings">
+    <span class="error"></span>
+
+    <div class="setting">
+      <input type="checkbox" id="display-vectors" checked="true">
+      <label for="display-vectors">Wyświetl wektory</label>
+    </div>
+    <br>
+
+    <div class="setting">
+      <label for="angle">Kąt nachylenia [°]:</label>
+      <input type="text" value="30" size="5" id="angle">
+    </div>
+    
+    <div class="setting">
+      <label for="height">Wysokość [m]:</label>
+      <input type="text" value="3" size="5" id="height">
+    </div>
+
+    <div class="setting">
+      <label for="pi">Wartość PI:</label>
+      <input type="text" value="5" size="5" id="pi" disabled>
+    </div>
+
+    <div class="setting">
+      <label for="initial-velocity">Prędkość początkowa [m/s]:</label>
+      <input type="text" value="0" size="5" id="initial-velocity">
+    </div>
+
+    <div class="setting">
+      <label for="size">Rozmiar bloczka [m]:</label>
+      <input type="text" value="0.5" size="5" id="size">
+    </div>
+
+    <div class="setting">
+      <label for="gravity">Przyspieszenie grawitacyjne [m/s^2]:</label>
+      <input type="text" value="9.81" size="5" id="gravity">
+    </div>
+
+    <div class="setting">
+      <label for="energy">Zachowana energia przy odbiciu [%]:</label>
+      <input type="text" value="100" size="5" id="energy">
+    </div>
+
+    <div class="setting">
+      <label for="friction">Współczynnik tarcia:</label>
+      <input type="text" value="0.5" size="5" id="friction">
+    </div>
+
+    <div class="setting">
+      <label for="time-speed">Prędkość czasu [s/s]:</label>
+      <input type="text" value="1" size="5" id="time-speed">
+    </div>
+
+    <div class="setting">
+      <label for="scale">Skala [piks/m]:</label>
+      <input type="text" value="150" size="5" id="scale">
+    </div>
+
+    <div class="player">
+      <i class="fa fa-play" id="play"></i>
+      <i class="fa fa-stop" id="stop"></i>
+    </div>
+  </div>
+
+  <div id="modal-overlay"></div>
+  <div id="modal">
+    <canvas id="graph"></canvas>
+  </div>
+
+  <script src="index.js" type="module"></script>
+</body>
+</html>

@@ -40,10 +40,10 @@ export const drawDottedLine = (ctx, x1, y1, x2, y2) => {
 
   ctx.translate(x1, y1);
   ctx.rotate(-angle);
-  for (let i = 1; i < length / 10; ++i) {
+  for (let i = 1; i < length / 5; ++i) {
     ctx.beginPath();
-    ctx.moveTo(-i * 10, 0);
-    ctx.lineTo(-i * 10 + 7, 0);
+    ctx.moveTo(-i * 5, 0);
+    ctx.lineTo(-i * 5 + 2, 0);
     ctx.stroke();
   }
 

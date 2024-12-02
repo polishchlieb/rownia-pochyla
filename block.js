@@ -113,7 +113,7 @@ export class Block {
   bounce() {
     const { scale } = this.settings;
 
-    if (this.bounceHeight < 1 / scale) {
+    if (this.bounceHeight < 1) {
       this.running = false;
       this.motion = new Motion(0, 0, 0, this.settings);
       this.velocity = 0;

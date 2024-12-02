@@ -8,7 +8,7 @@ export const calculateInitialHeight = ({ friction, angle, gravity, initialVeloci
 
 // czy bloczek wyleci poza rownie przy danej predkosci poczatkowej
 export const willFlyOff = ({ friction, angle, gravity, blockSize, length, initialVelocity }) =>
-  calculateInitialHeight(friction, angle, gravity, initialVelocity) + blockSize > length;
+  calculateInitialHeight({ friction, angle, gravity, initialVelocity }) + blockSize > length;
 
 // prędkość bloczka po odbiciu
 export const calculateBounceVelocity = ({ gravity, friction, angle, energy }, length) =>

@@ -93,13 +93,15 @@ export default class Graph {
       }
 
       if (this.discontinuities.includes(xMarker) && i !== 0) {
+        const previousValue = this.data[i - 1].y * factor;
+
+        ctx.lineTo(i - 1, -previousValue);
         ctx.stroke();
 
-        const previousValue = this.data[i - 1].y * factor;
         drawDottedLine(
           ctx,
           i - 1, -previousValue,
-          i, -value
+          i - 1, -value
         );
 
         ctx.beginPath();
